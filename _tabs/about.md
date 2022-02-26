@@ -1,8 +1,9 @@
 ---
-title: About
-icon: fas fa-info-circle
+title: 关于
+icon: fas fa-info
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+男的，资格的四川成都人，吃货，酒量差劲却喜欢喝酒的程序员（非正式的）。爱好多而不精，做饭、游泳、哑铃、跑步、话剧、电影等等都喜欢。坚定的唯物主义者和无神论者。
+
+可以和我探讨技术问题，当然主要是我听你讲，因为我技术太菜了哈哈哈哈。欢迎来咨询成都好玩的好吃的，保证推荐的不差劲。
