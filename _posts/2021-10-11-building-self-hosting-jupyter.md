@@ -1,6 +1,5 @@
 ---
 title: The Littlest Jupyter Hub 搭建草稿
-author: Michael Tan
 date: 2021-10-11 18:00:00 +0800
 categories: 实用技术
 tags: [网络]

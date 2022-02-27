@@ -1,6 +1,5 @@
 ---
 title: 博客搭建草稿
-author: Michael Tan
 date: 2021-07-12 13:00:00 +0800
 categories: 实用技术
 tags: [博客, 网络]

@@ -1,6 +1,5 @@
 ---
 title: Time Series Notes (0) - Why I decided to write these here
-author: Michael Tan
 date: 2022-02-04 11:10:00 +0800
 categories: 时间序列分析
 ---

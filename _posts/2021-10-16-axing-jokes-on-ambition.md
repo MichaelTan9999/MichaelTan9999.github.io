@@ -1,6 +1,8 @@
 ---
 title: 人各有志？别搞笑了
-author: 御姐阿星
+author:
+  name: 御姐阿星
+  link: https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIwOTE5ODYwOQ==&scene=124#wechat_redirect
 date: 2021-10-9 18:00:00 +0800
 categories: 杂感
 ---

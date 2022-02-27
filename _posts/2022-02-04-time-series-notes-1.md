@@ -1,6 +1,5 @@
 ---
 title: Time Series Notes (1) - Fundamental Concepts
-author: Michael Tan
 date: 2022-02-04 11:11:00 +0800
 categories: 时间序列分析
 ---

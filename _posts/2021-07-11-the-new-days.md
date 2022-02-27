@@ -1,6 +1,5 @@
 ---
 title: 新开篇
-author: Michael Tan
 date: 2021-07-11 15:00:00 +0800
 categories: 杂感
 ---
