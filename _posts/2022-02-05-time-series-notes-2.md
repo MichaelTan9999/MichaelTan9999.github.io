@@ -2,6 +2,7 @@
 title: Time Series Notes (2) - Stationary linear time series models
 date: 2022-02-24 10:00:00 +0800
 categories: 时间序列分析
+math: true
 ---
 
 # General linear processes
