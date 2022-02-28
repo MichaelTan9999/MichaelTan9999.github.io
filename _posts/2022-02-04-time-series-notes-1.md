@@ -1,5 +1,5 @@
 ---
-title: Time Series Notes (1) - Fundamental Concepts
+title: Time Series Notes (1) - Fundamental concepts
 date: 2022-02-04 11:11:00 +0800
 categories: 时间序列分析
 math: true
