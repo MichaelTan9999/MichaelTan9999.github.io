@@ -11,7 +11,7 @@ tags: [网络]
 
 # 什么是Jupyter Hub
 
-先来一个官方的定义，简而言之就是多用户线上的Jupyter Notebool使用环境。
+先来一个官方的定义，简而言之就是多用户线上的Jupyter Notebook使用环境。
 
 ![Jupyter Hub Graph](https://jupyterhub.readthedocs.io/en/stable/_images/jhub-fluxogram.jpeg)
 
