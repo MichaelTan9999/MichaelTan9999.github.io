@@ -78,8 +78,8 @@ https:
 
 设置正确可以通过`sudo tljh-config reload proxy`重启proxy服务。
 
-别忘了在DNS服务器配置相关的A记录！
-
+> 别忘了在DNS服务器配置相关的A记录！
+{: .prompt-tip }
 ## 设置GitHub认证（OAuth）
 
 在GitHub的Settings -> Developer Settings -> OAuth Apps可以看到新建OAuth Apps。点击新建，将主页URL设置为域名地址，将Authorization callback URL设置为`https://yourhub.yourdomain.edu/hub/oauth_callback`即可。然后生成Client Secret并保存好。
