@@ -20,7 +20,7 @@ tags: [博客]
 
 链接账号完成后，页面上方的部分会出现如下的配置。
 
-![cloudflare_pages_1.png](https://s2.loli.net/2022/03/09/iR23jgyufxoFaZB.png)
+![cloudflare-page-1.png](https://s2.loli.net/2022/03/12/ivDmLQIpVgKGw6U.png)
 
 Project name在这个位置不重要，仅仅用于对该项目的标识，但是它的命名有很严格的要求。虽然下方会出现一个跟命名相关的访问网址，但是在第一次成功发布后，我们可以修改为自定义域名，包括Project name本身也可以修改，所以这个位置的内容不是很重要。
 
@@ -32,7 +32,7 @@ Project name在这个位置不重要，仅仅用于对该项目的标识，但�
 
 这个网页的下方的部分展示了这些配置。
 
-![cloudflare_pages_2.png](https://s2.loli.net/2022/03/09/VdotAUBuIJxlnSb.png)
+![cloudflare-page-2.png](https://s2.loli.net/2022/03/12/VJRYEP1ci4yuFto.png)
 
 第一个Framework preset在这里其实意义不大，只是为了生成下方的预设命令。但是我们的命令本身就不是预设的，所以这里可以直接不选任何的框架。
 
