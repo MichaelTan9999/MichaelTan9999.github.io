@@ -11,7 +11,11 @@ math: true
 
 Any time series with a mean function that evolves over time is non-stationary. Consider a series of the form
 
-$$Z_t=\mu_t+X_t$$
+
+$$
+Z_t=\mu_t+X_t
+$$
+
 
 where $\mu_t$ is a nonconstant mean function and $X_t$ is a zero-mean stationary series.
 
@@ -21,17 +25,29 @@ where $\mu_t$ is a nonconstant mean function and $X_t$ is a zero-mean stationary
 
 The differencing operation on an arbitrary time series $\{Z_t\}$ is defined as 
 
-$$\nabla Z_t=Z_t-Z_{t-1},\space t\in\mathbb{Z}$$
+
+$$
+\nabla Z_t=Z_t-Z_{t-1},\space t\in\mathbb{Z}
+$$
+
 
 Here $\nabla=(I-B)$ is called the difference operator,
 
-$$\nabla Z=(I-B)Z=Z-BZ,\space\space(\nabla Z_t)=Z_t-(BZ)_t=Z_t-Z_{t-1}$$
+
+$$
+\nabla Z=(I-B)Z=Z-BZ,\space\space(\nabla Z_t)=Z_t-(BZ)_t=Z_t-Z_{t-1}
+$$
+
 
 and the new time series $\nabla Z=\{\nabla Z_t\}$ is called the first difference of $Z=\{Z_t\}$ or the differenced sequence.
 
 The iteration of differencing: for any $k,\nabla^kZ=\nabla^{k-1}(\nabla Z)$. For example, 
 
-$$(\nabla^2Z)_t=\nabla(\nabla Z_t)=(\nabla Z)_t-(\nabla Z)_{t-1}=(Z_t-Z_{t-1})-(Z_{t-1}-Z_{t-2})=Z_t-2Z_{t-1}+Z_{t-2}$$.
+
+$$
+(\nabla^2Z)_t=\nabla(\nabla Z_t)=(\nabla Z)_t-(\nabla Z)_{t-1}=(Z_t-Z_{t-1})-(Z_{t-1}-Z_{t-2})=Z_t-2Z_{t-1}+Z_{t-2}
+$$
+
 
 ### Properties of differencing
 
@@ -61,7 +77,11 @@ After taking differencing operations, the resulting sequence might well be consi
 
 A time series $\{Z_t\}$ is said to follow an integrated autoregressive-moving average (ARIMA) process if the $d$-th order difference
 
-$$W_t=\nabla^dZ_t$$
+
+$$
+W_t=\nabla^dZ_t
+$$
+
 
 is a stationary ARMA process. If $W_t$ is $\text{ARMA}(p,q)$, we say that $Z_t$ is $\text{ARIMA}(p,d,q)$.
 
@@ -81,9 +101,13 @@ Time series where increased dispersion seems to be be associated with increased 
 
 For series with non-stationarity in variance, we usually perform logarithm transformation before taking differencing or fitting a model.
 
-# Power transformation or Box-Cox transformation
+# Power transformation or Box-Cox transformations
 
-$$g(x)=\begin{cases}\frac{x^\lambda-1}{\lambda},&\lambda\ne0\\\log(x),&\lambda=0\end{cases},\space x>0$$
+$$
+g(x)=\begin{cases}\frac{x^\lambda-1}{\lambda},&\lambda\ne0\\\log(x),&\lambda=0\end{cases},\space x>0
+$$
+
+
 
 where $\lambda$ is a parameter. Note that the power function part in $g(x)$ converges to $\log(x)$ when the exponent $\lambda\rightarrow0$.
 

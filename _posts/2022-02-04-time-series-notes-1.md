@@ -22,17 +22,31 @@ For times series, the available information includes the time index $t$, and the
 
 ### Deterministic model
 
-$$Z_t=a+bt+\varepsilon_t$$
+$$
+Z_t=a+bt+\varepsilon_t
+$$
 
-$$Z_t=a+b_1t+b_2t^2+\cdots+b_pt^p+\varepsilon_t$$
+$$
+Z_t=a+b_1t+b_2t^2+\cdots+b_pt^p+\varepsilon_t
+$$
+
+
 
 Both are polynomial regression in time $t$.
 
 ### Stochastic model
 
-$$Z_t=\theta_0+\phi Z_{t-1}+\varepsilon_t$$
+$$
+Z_t=\theta_0+\phi Z_{t-1}+\varepsilon_t
+$$
 
-$$Z_t=a+b_1Z_{t-1}+b_2Z_{t-2}+\cdots+b_pZ_{t-p}+\varepsilon_t$$
+$$
+Z_t=a+b_1Z_{t-1}+b_2Z_{t-2}+\cdots+b_pZ_{t-p}+\varepsilon_t
+$$
+
+
+
+
 
 They are also called autoregressive model.
 
@@ -42,7 +56,11 @@ They are also called autoregressive model.
 
 For a times series $\{Z_t,t\in\mathbb{Z}\}$, the mean function (or mean sequence) is defined by
 
-$$\mu_t=\text{E}(Z_t),\space\space t\in\mathbb{Z}$$
+
+$$
+\mu_t=\text{E}(Z_t),\space\space t\in\mathbb{Z}
+$$
+
 
 That is to say, $\mu_t$ is just the expected value of the process at time $t$. In general, $\mu_t$ can be different at each time $t$.
 
@@ -50,41 +68,62 @@ That is to say, $\mu_t$ is just the expected value of the process at time $t$. I
 
  The auto-covariance function is defined as
 
-$$\gamma(t,s)=\text{Cov}(Z_t,Z_s)=\text{Cov}{(Z_t,Z_s)=\text{E}[(Z_t-\mu_t)(Z_s-\mu_s)]=\text{E}(Z_tZ_s)-\mu_t\mu_s}$$
+
+$$
+\gamma(t,s)=\text{Cov}(Z_t,Z_s)=\text{Cov}{(Z_t,Z_s)=\text{E}[(Z_t-\mu_t)(Z_s-\mu_s)]=\text{E}(Z_tZ_s)-\mu_t\mu_s}
+$$
 
 ## The variance function
 
 Especially, when $s=t$ in the above ACVF equation, we have the variance function of $\{Z_t\}$, which is defined as
 
-$$\gamma(t,t)=\text{Cov}(Z_t,Z_t)=\text{Var}(Z_t)$$
+
+$$
+\gamma(t,t)=\text{Cov}(Z_t,Z_t)=\text{Var}(Z_t)
+$$
 
 ## The auto-correlation function (ACF)
 
 The auto-correlation function is given by
 
-$$\rho(t,s)=\text{Corr}(Z_t,Z_s)=\frac{\text{Cov}(Z_t,Z_s)}{\sqrt{\text{Var}(Z_t)\text{Var}(Z_s)}}=\frac{\gamma(t,s)}{\sqrt{\gamma(t,t)\gamma(s,s)}}$$
+
+$$
+\rho(t,s)=\text{Corr}(Z_t,Z_s)=\frac{\text{Cov}(Z_t,Z_s)}{\sqrt{\text{Var}(Z_t)\text{Var}(Z_s)}}=\frac{\gamma(t,s)}{\sqrt{\gamma(t,t)\gamma(s,s)}}
+$$
 
 ## Some useful formula
 
 ### ACVF and ACF
 
-$$\gamma(t,t)=\text{Var}(Z_t)\space\space\space\space\space\rho(t,t)=1$$
+$$
+\gamma(t,t)=\text{Var}(Z_t)\space\space\space\space\space\rho(t,t)=1
+$$
 
-$$\gamma(t,s)=\gamma(s,t)\space\space\space\space\space\rho(t,s)=\rho(s,t)$$
+$$
+\gamma(t,s)=\gamma(s,t)\space\space\space\space\space\rho(t,s)=\rho(s,t)
+$$
 
-$$\vert\gamma(t,s)\vert\le\sqrt{\gamma(t,t)\gamma(s,s)}\space\space\space\space\space\vert\rho(t,s)\vert\le1$$
+$$
+\vert\gamma(t,s)\vert\le\sqrt{\gamma(t,t)\gamma(s,s)}\space\space\space\space\space\vert\rho(t,s)\vert\le1
+$$
+
+
 
 The first two results are directly from the definitions, and the third one can be derived by Cauchy-Schwarz inequality.
 
 ### Variance function
 
-$$\text{Cov}(aX,Y)=a\text{Cov}(X,Y)$$
+$$
+\text{Cov}(aX,Y)=a\text{Cov}(X,Y)
+$$
 
-$$\text{Cov}(aX+bY,Z)=a\text{Cov}(X,Z)+b\text{Cov}(Y,Z)$$
+$$
+\text{Cov}(aX+bY,Z)=a\text{Cov}(X,Z)+b\text{Cov}(Y,Z)
+$$
 
-
-
-$$\text{Cov}[\sum_{i=1}^m c_iY_i,\sum_{j=1}^n d_jZ_j]=\sum_{i=1}^m\sum_{j=1}^n c_jd_j\text{Cov}(Y_i,Z_i)$$
+$$
+\text{Cov}[\sum_{i=1}^m c_iY_i,\sum_{j=1}^n d_jZ_j]=\sum_{i=1}^m\sum_{j=1}^n c_jd_j\text{Cov}(Y_i,Z_i)
+$$
 
 # Stationarity
 
@@ -107,13 +146,10 @@ White noise is a sequence of $i.i.d.$ random variables, denoted by $\{a_t\}$, wi
 
 ### Characteristics of white noise
 
-$$\gamma(t,t-k)=\left\{\begin{matrix}\sigma_a^2,&k=0\\0,&k\ne0\end{matrix}\right.$$
+$$
+\gamma(t,t-k)=\left\{\begin{matrix}\sigma_a^2,&k=0\\0,&k\ne0\end{matrix}\right.
+$$
 
-$$\rho_k=\left\{\begin{matrix}1,&k=0\\0,&k\ne0\end{matrix}\right.$$
-
-
-
-
-
-
-
+$$
+\rho_k=\left\{\begin{matrix}1,&k=0\\0,&k\ne0\end{matrix}\right.
+$$
