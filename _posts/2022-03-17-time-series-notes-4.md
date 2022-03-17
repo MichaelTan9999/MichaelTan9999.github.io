@@ -135,7 +135,7 @@ $$
 $$
 
 
-The PACF is to measure the direct impact from $Z_{t-k}$ at $Z_t$, with removing the middle terms from $Z_{t-1},\dots,Z_{t-k+1}$. So **for $\text{AR}(p)$ process, the PACF has a cut-off: $\phi_{kk}=0$ for $k>p$**. This property mirrors the cut-off property of the ACF of a $\text{MA}(q)$ process: $\rho_k=0$ for $k>q$.
+The PACF is to measure the direct impact from $Z_{t-k}$ at $Z_t$, with removing the middle terms from $Z_{t-1},\dots,Z_{t-k+1}$. So **for $\text{AR}(p)$ process, the PACF has a cut-off: $\phi_{kk}=0$ for $k>p$**. This property mirrors the cut-off property of the ACF of an $\text{MA}(q)$ process: $\rho_k=0$ for $k>q$.
 
 For $\text{MA}(1)$ process $Z_t=a_t+\theta a_{t-1}$, we have
 
@@ -145,7 +145,7 @@ $$
 $$
 
 1. Notice that the partial autocorrelations of an $\text{MA}(1)$ model are never zero. Except the special case of $\theta^2=1$. They decay exponentially to zero, rather like the autocorrelation for an $\text{AR}(1)$ series.
-2. The behaviors of PACFs for ARMA processes is quite similar to that for MA processes.
+2. The behaviors of PACF for ARMA processes is quite similar to that for MA processes.
 
 ## Sample PACF
 
