@@ -4,7 +4,8 @@ author:
   name: Shangzhi Huang
   link: https://ngzhio.github.io/about/
 date: 2020-07-24 18:00:00 +0800
-category: 杂感
+category: [备份]
+comments: false
 ---
 
 正文开始前，这是一位有趣的程序员的文章，他的博客在[这里](https://ngzhio.github.io)。对[原文](https://ngzhio.github.io/2020/07/24/cheng-xu-yuan-shi-ru-he-jie-jue-xing-sheng-huo-de.html)作了标点符号的修改。该转载已征得作者本人的同意。

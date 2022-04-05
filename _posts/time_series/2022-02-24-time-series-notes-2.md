@@ -34,19 +34,12 @@ where $\{a_t\}\sim WN(0,\sigma_a^2)$ and $\sum_{j=0}^{\infty}\psi_j^2<\infty$.
 ## Some statistics
 
 $$
-\mu=\text{E}(Z_t)=0 \\
-$$
-
-$$
-\gamma_0=\text{Var}(Z_t)=\sigma_a^2\sum_{j=0}^{\infty}\psi_j^2
-$$
-
-$$
-\gamma_k=\text{Cov}(Z_t,Z_{t-k}),\space k\ge0
-$$
-
-$$
-\rho_k=\frac{\text{Cov}(Z_t,Z_{t-k})}{\text{Var}(Z_t)}=\frac{\sum_{j=0}^\infty\psi_j\psi_{j+k}}{\sum_{j=0}^\infty\psi_j^2},\space k>0
+\begin{align}
+& \mu=\text{E}(Z_t)=0 \\
+& \gamma_0=\text{Var}(Z_t)=\sigma_a^2\sum_{j=0}^{\infty}\psi_j^2 \\
+& \gamma_k=\text{Cov}(Z_t,Z_{t-k}),\space k\ge0 \\
+& \rho_k=\frac{\text{Cov}(Z_t,Z_{t-k})}{\text{Var}(Z_t)}=\frac{\sum_{j=0}^\infty\psi_j\psi_{j+k}}{\sum_{j=0}^\infty\psi_j^2},\space k>0
+\end{align}
 $$
 
 # Moving average (MA) processes
@@ -95,16 +88,11 @@ For a $\text{MA}(q)$ process where $Z_t=\theta_0+a_t+\theta_1a_{t-1}+\theta_2a_{
 
 
 $$
-\mu=\text{E}(Z_t)=\theta_0
-$$
-
-$$
-\gamma_0=(1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2)\sigma_a^2
-$$
-
-
-$$
-\rho_k=\left\{\begin{matrix}\frac{\theta_k+\theta_1\theta_{k+1}+\theta_2\theta_{k+2}+\cdots+\theta_{q-k}\theta_q}{1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2},&q=1,2,\cdots,q\\0,&k\ge q+1\end{matrix}\right.
+\begin{align}
+& \mu=\text{E}(Z_t)=\theta_0 \\
+& \gamma_0=(1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2)\sigma_a^2 \\
+& \rho_k=\left\{\begin{matrix}\frac{\theta_k+\theta_1\theta_{k+1}+\theta_2\theta_{k+2}+\cdots+\theta_{q-k}\theta_q}{1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2},&q=1,2,\cdots,q\\0,&k\ge q+1\end{matrix}\right.
+\end{align}
 $$
 
 ### Special form of MA(1)
@@ -113,29 +101,14 @@ For $MA(1)$: $Z_t=\theta_0+a_t+\theta_1a_{t-1}$, the statistics are
 
 
 $$
-\mu=\text{E}(Z_t)=\theta_0
-$$
-
-$$
-\gamma_0=\text{Var}(Z_t)=\sigma_a^2(1+\theta_1^2)
-$$
-
-
-$$
-\gamma_1=\text{Cov}(Z_t,Z_{t-1})=\text{Cov}(a_t+\theta_1a_{t-1},a_{t-1}+\theta_1a_{t-2})=\sigma_a^2\theta_1
-$$
-
-$$
-\rho_1=\frac{\gamma_1}{\gamma_0}=\frac{\sigma_a^2\theta_1}{\sigma_a^2(1+\theta_1^2)}=\frac{\theta_1}{1+\theta_1^2}
-$$
-
-
-$$
-\gamma_2=\text{Cov}(a_t+\theta_1a_{t-1},a_{t-2}+\theta_1a_{t-3})=0
-$$
-
-$$
-\rho_2=0
+\begin{align}
+& \mu=\text{E}(Z_t)=\theta_0 \\
+& \gamma_0=\text{Var}(Z_t)=\sigma_a^2(1+\theta_1^2) \\
+& \gamma_1=\text{Cov}(Z_t,Z_{t-1})=\text{Cov}(a_t+\theta_1a_{t-1},a_{t-1}+\theta_1a_{t-2})=\sigma_a^2\theta_1 \\
+& \rho_1=\frac{\gamma_1}{\gamma_0}=\frac{\sigma_a^2\theta_1}{\sigma_a^2(1+\theta_1^2)}=\frac{\theta_1}{1+\theta_1^2} \\
+& \gamma_2=\text{Cov}(a_t+\theta_1a_{t-1},a_{t-2}+\theta_1a_{t-3})=0 \\
+& \rho_2=0
+\end{align}
 $$
 
 # Autoregressive (AR) process
@@ -199,19 +172,12 @@ Given the values $\phi_1,\phi_2,\cdots,\phi_p$, the Yule-Walker equations can be
 ### General form AR(p)
 
 $$
-\mu=\frac{1}{1-\phi_1-\phi_2-\cdots-\phi_p}
-$$
-
-$$
-\rho_k=\phi_1\rho_{k-1}+\phi_2\rho_{k-2}+\cdots+\phi_p\rho_{k-p},\space k\ge1
-$$
-
-$$
-\gamma_0=\frac{\sigma_a^2}{1-\phi_1-\phi_2-\cdots-\phi_p}
-$$
-
-$$
-\gamma_k=\gamma_0\times\rho_k
+\begin{align}
+& \mu=\frac{1}{1-\phi_1-\phi_2-\cdots-\phi_p} \\
+& \rho_k=\phi_1\rho_{k-1}+\phi_2\rho_{k-2}+\cdots+\phi_p\rho_{k-p},\space k\ge1 \\
+& \gamma_0=\frac{\sigma_a^2}{1-\phi_1-\phi_2-\cdots-\phi_p} \\
+& \gamma_k=\gamma_0\times\rho_k
+\end{align}
 $$
 
 ### Special form of AR(1)
@@ -220,15 +186,11 @@ For $\text{AR}(1)$: $Z_t=\theta_0+\phi Z_{t-1}+a_t$
 
 
 $$
-\mu=\frac{\theta_0}{1-\phi}
-$$
-
-$$
-\psi_0=1,\space\space\psi_k=\phi^k
-$$
-
-$$
-Z_t=\frac{\theta_0}{1-\phi}+\sum_{j=0}^\infty\phi^ja_{t-j}
+\begin{align}
+& \mu=\frac{\theta_0}{1-\phi} \\
+& \psi_0=1,\space\space\psi_k=\phi^k \\
+& Z_t=\frac{\theta_0}{1-\phi}+\sum_{j=0}^\infty\phi^ja_{t-j}
+\end{align}
 $$
 
 # The mixed autoregressive-moving average model
@@ -259,14 +221,11 @@ where $\phi(x)$ and $\theta(x)$ are the AR and MA characteristic polynomials, re
 
 
 $$
-\phi(x)=1-\phi_1x-\phi_2x^2-\cdots-\phi_px^p
+\begin{align}
+& \phi(x)=1-\phi_1x-\phi_2x^2-\cdots-\phi_px^p \\
+& \theta(x)=1+\theta_1x+\cdots+\theta_qx^q
+\end{align}
 $$
-
-$$
-\theta(x)=1+\theta_1x+\cdots+\theta_qx^q
-$$
-
-
 
 There exists a unique stationary solution to the $\text{ARMA}(p,q)$ model if all roots of the AR characteristic equation $\phi(x)=0$ are outside the unit circle.
 
@@ -280,19 +239,12 @@ $$
 ## Statistics
 
 $$
-\mu=\frac{\theta_0}{1-\phi_1-\phi_2-\cdots-\phi_p}
-$$
-
-$$
-\gamma_k=\phi_1\gamma_{k-1}+\phi_2\gamma_{k-2}+\cdots+\phi_p\gamma_{k-p}
-$$
-
-$$
-\rho_k=\phi_1\rho_{k-1}+\phi_2\rho_{k-2}+\cdots+\phi_p\rho_{k-p}
-$$
-
-$$
-\rho_k=\Phi\rho_q,\space k>q+1
+\begin{align}
+& \mu=\frac{\theta_0}{1-\phi_1-\phi_2-\cdots-\phi_p} \\
+& \gamma_k=\phi_1\gamma_{k-1}+\phi_2\gamma_{k-2}+\cdots+\phi_p\gamma_{k-p} \\
+& \rho_k=\phi_1\rho_{k-1}+\phi_2\rho_{k-2}+\cdots+\phi_p\rho_{k-p} \\
+& \rho_k=\Phi\rho_q,\space k>q+1
+\end{align}
 $$
 
 # Invertbility

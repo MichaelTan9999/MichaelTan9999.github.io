@@ -23,30 +23,22 @@ For times series, the available information includes the time index $t$, and the
 ### Deterministic model
 
 $$
-Z_t=a+bt+\varepsilon_t
+\begin{align}
+& Z_t=a+bt+\varepsilon_t \\
+& Z_t=a+b_1t+b_2t^2+\cdots+b_pt^p+\varepsilon_t
+\end{align}
 $$
-
-$$
-Z_t=a+b_1t+b_2t^2+\cdots+b_pt^p+\varepsilon_t
-$$
-
-
 
 Both are polynomial regression in time $t$.
 
 ### Stochastic model
 
 $$
-Z_t=\theta_0+\phi Z_{t-1}+\varepsilon_t
+\begin{align}
+& Z_t=\theta_0+\phi Z_{t-1}+\varepsilon_t \\
+& Z_t=a+b_1Z_{t-1}+b_2Z_{t-2}+\cdots+b_pZ_{t-p}+\varepsilon_t
+\end{align}
 $$
-
-$$
-Z_t=a+b_1Z_{t-1}+b_2Z_{t-2}+\cdots+b_pZ_{t-p}+\varepsilon_t
-$$
-
-
-
-
 
 They are also called autoregressive model.
 
@@ -96,33 +88,23 @@ $$
 ### ACVF and ACF
 
 $$
-\gamma(t,t)=\text{Var}(Z_t)\space\space\space\space\space\rho(t,t)=1
+\begin{align}
+& \gamma(t,t)=\text{Var}(Z_t)\space\space\space\space\space\rho(t,t)=1 \\
+& \gamma(t,s)=\gamma(s,t)\space\space\space\space\space\rho(t,s)=\rho(s,t) \\
+& \vert\gamma(t,s)\vert\le\sqrt{\gamma(t,t)\gamma(s,s)}\space\space\space\space\space\vert\rho(t,s)\vert\le1
+\end{align}
 $$
-
-$$
-\gamma(t,s)=\gamma(s,t)\space\space\space\space\space\rho(t,s)=\rho(s,t)
-$$
-
-$$
-\vert\gamma(t,s)\vert\le\sqrt{\gamma(t,t)\gamma(s,s)}\space\space\space\space\space\vert\rho(t,s)\vert\le1
-$$
-
-
 
 The first two results are directly from the definitions, and the third one can be derived by Cauchy-Schwarz inequality.
 
 ### Variance function
 
 $$
-\text{Cov}(aX,Y)=a\text{Cov}(X,Y)
-$$
-
-$$
-\text{Cov}(aX+bY,Z)=a\text{Cov}(X,Z)+b\text{Cov}(Y,Z)
-$$
-
-$$
-\text{Cov}[\sum_{i=1}^m c_iY_i,\sum_{j=1}^n d_jZ_j]=\sum_{i=1}^m\sum_{j=1}^n c_jd_j\text{Cov}(Y_i,Z_i)
+\begin{align}
+& \text{Cov}(aX,Y)=a\text{Cov}(X,Y) \\
+& \text{Cov}(aX+bY,Z)=a\text{Cov}(X,Z)+b\text{Cov}(Y,Z) \\
+& \text{Cov}[\sum_{i=1}^m c_iY_i,\sum_{j=1}^n d_jZ_j]=\sum_{i=1}^m\sum_{j=1}^n c_jd_j\text{Cov}(Y_i,Z_i)
+\end{align}
 $$
 
 # Stationarity
@@ -147,9 +129,9 @@ White noise is a sequence of $i.i.d.$ random variables, denoted by $\{a_t\}$, wi
 ### Characteristics of white noise
 
 $$
-\gamma(t,t-k)=\left\{\begin{matrix}\sigma_a^2,&k=0\\0,&k\ne0\end{matrix}\right.
+\begin{align}
+& \gamma(t,t-k)=\left\{\begin{matrix}\sigma_a^2,&k=0\\0,&k\ne0\end{matrix}\right. \\
+& \rho_k=\left\{\begin{matrix}1,&k=0\\0,&k\ne0\end{matrix}\right.
+\end{align}
 $$
 
-$$
-\rho_k=\left\{\begin{matrix}1,&k=0\\0,&k\ne0\end{matrix}\right.
-$$
