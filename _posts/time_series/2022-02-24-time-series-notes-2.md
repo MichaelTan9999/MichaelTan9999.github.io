@@ -175,7 +175,7 @@ $$
 \begin{align}
 & \mu=\frac{1}{1-\phi_1-\phi_2-\cdots-\phi_p} \\
 & \rho_k=\phi_1\rho_{k-1}+\phi_2\rho_{k-2}+\cdots+\phi_p\rho_{k-p},\space k\ge1 \\
-& \gamma_0=\frac{\sigma_a^2}{1-\phi_1-\phi_2-\cdots-\phi_p} \\
+& \gamma_0=\frac{\sigma_a^2}{1-\phi_1\rho_1-\phi_2\rho_2-\cdots-\phi_p\rho_p} \\
 & \gamma_k=\gamma_0\times\rho_k
 \end{align}
 $$
