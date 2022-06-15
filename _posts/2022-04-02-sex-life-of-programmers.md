@@ -1,8 +1,6 @@
 ---
 title: 程序员是如何解决性生活的
-author:
-  name: Shangzhi Huang
-  link: https://ngzhio.github.io/about/
+author: shangzhi_huang
 date: 2020-07-24 18:00:00 +0800
 category: [备份]
 comments: false
