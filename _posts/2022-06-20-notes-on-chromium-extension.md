@@ -24,7 +24,8 @@ categories: 实用技术
 
 一个服务器扩展被使用时，（如果它具有`index.html`），那么浏览器会使用`extension://{some-long-unique-identifier}/index.html`中的文件来提供服务。其中`{some-long-unique-identifier}`在安装期间分配给扩展的唯一标识符。每个扩展使用不同的唯一标识符。每个标识符都指向在浏览器中安装的 Web 捆绑包。
 
-注意：权限必须在使用前在manife.json中注明，否则浏览器不认为这个扩展具有相应的权限。
+> 权限必须在使用前在`manife.json`中注明，否则浏览器不认为这个扩展具有相应的权限。
+{: .prompt-warning}
 
 # 以一个例子来介绍扩展内部
 
@@ -165,6 +166,7 @@ download.click()
  ...
 }
 ```
+{: file='/manifest.json'}
 
 但是自动执行的静态注入不方便控制注入的时机。虽然可以使用`run_at`字段来控制代码片段的执行时间，但是为了避免过多的测试，本次扩展的编写过程没有使用静态注入。`run_at`可以是`document_start`、`document_end`以及`document_idle`。可以使用一下两种方式修改静态注入的时机。
 
@@ -182,6 +184,7 @@ download.click()
   ...
 }
 ```
+{: file='/manifest.json'}
 
 ```javascript
 chrome.scripting.registerContentScript({
