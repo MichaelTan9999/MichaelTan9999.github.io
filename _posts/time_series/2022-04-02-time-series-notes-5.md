@@ -5,7 +5,7 @@ categories: 时间序列分析
 math: true
 ---
 
-# Introduction
+## Introduction
 
 The hyper parameters of a time series model, for example, $p,d,q$ for an $\text{ARIMA}(p,d,q)$ model is already known. And the model will be completely determined if the values of parameters like
 
@@ -19,7 +19,7 @@ are further known.
 
 Then we have to use methods to estimate these values based on observed values from $\{Z_t\}$.
 
-# Conditional least squares (CLS)
+## Conditional least squares (CLS)
 
 The conditional least square is derived from the basic linear regression, where we can see $Z_{t+1}$ as $Y$ in the linear regression and the other $Z_t,\dots,Z_{t-p}$ as the $X_i$ In the linear regression.
 
@@ -57,7 +57,7 @@ $$
 \end{align}
 $$
 
-## CLS on $\text{AR}(1)$ process
+### CLS on $\text{AR}(1)$ process
 
 The conditional sum of squares function for $\text{AR}(1)$ process is
 
@@ -110,7 +110,7 @@ $$
 \hat\phi=\frac{\sum_{t=2}^n(Z_t-\bar y)(Z_{t-1}-\bar x)}{\sum_{t=2}^n(Z_{t-1}-\bar x)^2}\approx\frac{\sum_{t=2}^n(Z_t-{\color{red}\bar Z})(Z_{t-1}-{\color{red}\bar Z})}{\sum_{t=2}^n(Z_{t-1}-{\color{red}\bar Z})^2}\approx\frac{\sum_{t=2}^n(Z_t-{\color{red}\bar Z})(Z_{t-1}-{\color{red}\bar Z})}{\sum_{\color{green}t=1}^n(Z_{t-1}-{\color{red}\bar Z})^2}=r_1(\hat\rho_1)
 $$
 
-## CLS on $\text{MA}(1)$ process
+### CLS on $\text{MA}(1)$ process
 
 
 
@@ -143,7 +143,7 @@ $$
 > It is **impossible to directly calculate** the conditional least square estimates for MA and ARMA models. Some numerical optimization methods, such as Gaussian Newton,  are usually used to search the estimates.
 {: .prompt-warning }
 
-# Maximum likelihood (ML) and unconditional least squares (ULS)
+## Maximum likelihood (ML) and unconditional least squares (ULS)
 
 For any set of observations $Z_1,Z_2,\cdots,Z_n$ (time series or otherwise), the likelihood function $L$ is defined to be the probability (density) value of obtaining the data actually observed. However, it is considered as a function of the parameters in the model.
 
@@ -151,7 +151,7 @@ For any set of observations $Z_1,Z_2,\cdots,Z_n$ (time series or otherwise), the
 
 **Disadvantage**: The method needs a specific joint probability density function of the process, which is sometimes complex.
 
-## ULS and ML on $\text{AR}(1)$ model
+### ULS and ML on $\text{AR}(1)$ model
 
 Consider an $\text{AR}(1)$ model $Z_t-\mu=\phi(Z_{t-1}-\mu)+a_t$, where the white noise $\{a_t\}\sim i.i.d.N(0,\sigma_a^2)$, and the unknown parameters are $\mu,\phi,\sigma_a^2$.
 
@@ -210,7 +210,7 @@ $$
 \end{align}
 $$
 
-# Properties of the estimates
+## Properties of the estimates
 
 The CLS, ULS and ML estimates have the same large-sample properties.
 

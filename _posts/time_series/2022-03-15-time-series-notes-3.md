@@ -5,9 +5,9 @@ categories: 时间序列分析
 math: true
 ---
 
-# Stationarity through differencing
+## Stationarity through differencing
 
-## Non-stationarity in mean
+### Non-stationarity in mean
 
 Any time series with a mean function that evolves over time is non-stationary. Consider a series of the form
 
@@ -19,9 +19,9 @@ $$
 
 where $\mu_t$ is a nonconstant mean function and $X_t$ is a zero-mean stationary series.
 
-## Differencing operation
+### Differencing operation
 
-### Definition of differencing
+#### Definition of differencing
 
 The differencing operation on an arbitrary time series $\{Z_t\}$ is defined as 
 
@@ -49,7 +49,7 @@ $$
 $$
 
 
-### Properties of differencing
+#### Properties of differencing
 
 1. It is a linear operator on sequences / time series, namely for any two sequences $X=(X)_t$ and $Y=(Y)_t$, and numbers $a,b$, $\nabla(aX+bY)=a\nabla X+b\nabla Y$ which means for any $t$, $\nabla(aX+bY)_t=a\nabla X_t+b\nabla Y_t$.
 
@@ -67,13 +67,13 @@ The mean function of $Y$: $\mu_Y=\text{E}(X_t)-\text{E}(X_{t-1})=\mu_X-\mu_X=0$.
 
 The covariance function of $Y$: $\text{Cov}(Y_t,Y_{t-k})=\text{Cov}(\nabla X,\nabla X_{t-k})=\text{Cov}(X_t-X_{t-1},X_{t-k}-X_{t-k-1})=\gamma_k-\gamma_{k-1}-\gamma_{k+1}+\gamma_k$, where $\gamma_k=\text{Cov}(X_t,X_{t-k})$ and $k=0,1,2,\dots$ So this covariance of $Y$ depends only on the lag $k$.
 
-# ARIMA models
+## ARIMA models
 
-## Motivation
+### Motivation
 
 After taking differencing operations, the resulting sequence might well be considered as arising from a stationary time series model. Note that the ARMA model is the most general model among what we have learned. Combin- ing these two facts, we reach the general class of integrated autoregressive-moving average (ARIMA) models.
 
-## Definition of ARIMA model
+### Definition of ARIMA model
 
 A time series $\{Z_t\}$ is said to follow an integrated autoregressive-moving average (ARIMA) process if the $d$-th order difference
 
@@ -87,21 +87,21 @@ is a stationary ARMA process. If $W_t$ is $\text{ARMA}(p,q)$, we say that $Z_t$ 
 
 Note that when $d=0$, the $\text{ARIMA}(p,d,q)$ process reduces to $\text{ARMA}(p,q)$. 
 
-# Log transformation
+## Log transformation
 
-## Motivation
+### Motivation
 
 In words, if the standard deviation of the series is proportional to the level of the series, then transforming to logarithms will produce a series with approximately constant variance.
 
 Also, if the level of the series $\mu_t$ is changing roughly exponentially, the log-transformed series will exhibit a linear trend.
 
-## Non-stationarity in variance
+### Non-stationarity in variance
 
 Time series where increased dispersion seems to be be associated with increased levels of the series — the larger the level of the series, the more variation there is around that level and conversely.
 
 For series with non-stationarity in variance, we usually perform logarithm transformation before taking differencing or fitting a model.
 
-# Power transformation or Box-Cox transformations
+## Power transformation or Box-Cox transformations
 
 $$
 g(x)=\begin{cases}\frac{x^\lambda-1}{\lambda},&\lambda\ne0\\\log(x),&\lambda=0\end{cases},\space x>0

@@ -7,14 +7,14 @@ tags: [博客]
 
 由于众所周知的原因，GitHub肯定是需要搭梯子才能访问到的。GitHub Pages也不像国内的普通网站访问这么稳定，一直很想找一个可以对这个博客网站提供镜像的服务商。之前有朋友在[Netlify](https://www.netlify.com)上面成功对博客进行了镜像处理，在配置后从GitHub自动拉取到发布都实现了自动化。但是比较复杂，甚至为了使用CDN需要重新更改NS服务提供商为Netlify。对于像我一样已经把域名的Registrar和DNS都迁移到Cloudflare下面的这种用户来说，实属有点画蛇添足了。好在昨天偶然登录上Cloudflare，发现它为免费用户也提供了类似GitHub Pages的Cloudflare Pages的服务，随即决定试试。下面以本博客为例记录一下要点。
 
-# 链接账号
+## 链接账号
 
 这一步很简单，直接照着引导进行GitHub账号的登录，然后选择要共享给Cloudflare的仓库。当然它还可以链接GitLab账号，除了这两家在线代码托管仓库外，暂时不支持别家的。随即会跳转回Cloudflare，并且可以看到共享给Cloudflare的仓库名字了。选择要进行前端编译和发布的仓库，进行下一步。
 
 > 查看这个博客的[镜像](https://blog.michaeltan.org)
 {: .prompt-info }
 
-# 编译配置
+## 编译配置
 
 这一步是整个环节中最关键的配置。本篇的目的也在于此，方便以后相似前端发布的快速配置。
 

@@ -5,9 +5,9 @@ categories: 时间序列分析
 math: true
 ---
 
-# Residual Analysis
+## Residual Analysis
 
-## Definition of residuals
+### Definition of residuals
 
 Consider an $\text{AR}(1)$ model with a constant term: $Z_t=\phi Z_{t-1}+\theta_0+a_t$, having estimated $\phi$ and $\theta_0$, the residuals are defined as
 
@@ -17,7 +17,7 @@ $$
 
 If the model is correctly specified and the parameter estimates are reasonably close to the true values, then the residuals should have nearly the properties of a white noise: $i.i.d.$ with zero mean and common variances. Deviations from these properties would indicate an indequacy of the fit and we will search for a more appropriate model.
 
-## Calculation of residuals
+### Calculation of residuals
 
 Consider an $\text{ARMA}(1,1)$ model
 
@@ -38,7 +38,7 @@ Where $\hat\pi_j$s are functions of $\hat\phi_1,\dots,\hat\phi_p$, and $\hat\the
 
 Standardized residuals: $\{a_t/s\}$, where $s^2$ is the sample variance of the residual sequence.
 
-## Ways of residual analysis
+### Ways of residual analysis
 
 | Method                                                       | Target                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -50,7 +50,7 @@ Standardized residuals: $\{a_t/s\}$, where $s^2$ is the sample variance of the r
 2. The histogram and the Q-Q plot always give a very direct graph to show the normality while the normality test such as Shapiro-Wilk normality test gives a numerical result.
 3. The upper and lower bounds of the correlogram, the sample autocorrelation function (ACF) of the residuals, can be calculated through The Bartlett’s approximation.
 
-### Ljung-Box test
+#### Ljung-Box test
 
 For a fitted $\text{ARMA}(p,q)$ model, the Ljung-Box test is modified on Box & Pierce test statistic. Ljung-Box test statistic is defined as
 
@@ -65,7 +65,7 @@ where $K$ is predetermined integer, $\hat\rho_j^2$ is the sample ACF of the resi
 > The degrees of freedom is unchanged with or without the intercept.
 {: .prompt-info }
 
-# Analysis of over-parameterized models
+## Analysis of over-parameterized models
 
 We usually overfit a time series to confirm the selected model. For example, if we want to pick an $\text{AR}(2)$ model, we will use an $\text{AR}(3)$ model to overfit. The original $\text{AR}(2)$ model would be confirmed if:
 

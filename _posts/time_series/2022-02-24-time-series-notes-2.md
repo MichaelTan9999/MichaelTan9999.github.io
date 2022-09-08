@@ -5,19 +5,19 @@ categories: 时间序列分析
 math: true
 ---
 
-# General linear processes
+## General linear processes
 
-## Definition
+### Definition
 
-### Linear time series
+#### Linear time series
 
 A time series $\{Z_t\}$ is linear if the value of $Z_t$ is a linear function of a white noise sequence.
 
-### Causal time series
+#### Causal time series
 
 A time series $\{Z_t\}$ is causal if the value of $Z_t$ is affected only by the information up to now.
 
-### General linear process
+#### General linear process
 
 A linear, causal and stationary time series is also called a general linear process.
 
@@ -31,7 +31,7 @@ $$
 
 where $\{a_t\}\sim WN(0,\sigma_a^2)$ and $\sum_{j=0}^{\infty}\psi_j^2<\infty$.
 
-## Some statistics
+### Some statistics
 
 $$
 \begin{align}
@@ -42,9 +42,9 @@ $$
 \end{align}
 $$
 
-# Moving average (MA) processes
+## Moving average (MA) processes
 
-## Definition
+### Definition
 
 A moving average process of order $q$, and abbreviated as $\text{MA}(q)$, is defined as:
 
@@ -60,7 +60,7 @@ The MA process is also called the MA model.
 
 Note that MA process is a special general linear process. Hence, it is <font color=red>linear, causal and stationary</font>.
 
-## Back-shift operator $B$
+### Back-shift operator $B$
 
 The operator $B$ is a symbol that denotes the back-shift of the time series:
 
@@ -80,9 +80,9 @@ $$
 
 where $\theta(x)=1+\theta_1x+\cdots+\theta_qx^q$ is the **MA characteristic polynomial**.
 
-## Some statistics
+### Some statistics
 
-### General form MA(q)
+#### General form MA(q)
 
 For a $\text{MA}(q)$ process where $Z_t=\theta_0+a_t+\theta_1a_{t-1}+\theta_2a_{t-2}+\cdots+\theta_qa_{t-q},\space\space\space\{a_t\}\sim WN(0,\sigma_a^2)$, we have
 
@@ -95,7 +95,7 @@ $$
 \end{align}
 $$
 
-### Special form of MA(1)
+#### Special form of MA(1)
 
 For $MA(1)$: $Z_t=\theta_0+a_t+\theta_1a_{t-1}$, the statistics are
 
@@ -111,9 +111,9 @@ $$
 \end{align}
 $$
 
-# Autoregressive (AR) process
+## Autoregressive (AR) process
 
-## Definition
+### Definition
 
 A $p$-th order autoregressive model (or, for short, an $\text{AR}(p)$ model) $\{Z_t\}$ satisfies the equation
 
@@ -127,9 +127,9 @@ where $p\ge0$ is an integer, $\{\phi_i\}$ are real numbers, and $\{a_t\}\sim WN(
 
 The model can be rewritten as $\phi(B)Z_t=\theta_0+a_t$, where $\phi(x)=1-\phi_1x-\phi_2x^2-\cdots-\phi_px^p$ is **AR characteristic polynomial**. If all roots of the corresponding $\phi(x)=0$ are outside the unit circle, the $\text{AR}(p)$ model is stationary, and the unique solution is called $\text{AR}(p)$ process. The condition above is called stationarity condition.
 
-## Some statistics
+### Some statistics
 
-### Yule-Walker equations (matrix form)
+#### Yule-Walker equations (matrix form)
 
 Consider a $\text{AR}(1)$ model, where $Z_t=\theta_0+\phi Z_{t-1}+a_t$. Suppose it is a stationary process, we can substitue the $Z_t$ terms with its stationary condition that $Z_t=\mu+\sum_{j=0}^\infty\psi_ja_{t-j}$. By doing so, we have that
 
@@ -169,7 +169,7 @@ $$
 
 Given the values $\phi_1,\phi_2,\cdots,\phi_p$, the Yule-Walker equations can be solved for $\rho_1,\rho_2,\cdots,\rho_p$.
 
-### General form AR(p)
+#### General form AR(p)
 
 $$
 \begin{align}
@@ -180,7 +180,7 @@ $$
 \end{align}
 $$
 
-### Special form of AR(1)
+#### Special form of AR(1)
 
 For $\text{AR}(1)$: $Z_t=\theta_0+\phi Z_{t-1}+a_t$
 
@@ -193,9 +193,9 @@ $$
 \end{align}
 $$
 
-# The mixed autoregressive-moving average model
+## The mixed autoregressive-moving average model
 
-## Definition
+### Definition
 
 In general, if a time series has the form below,
 
@@ -236,7 +236,7 @@ $$
 Z_t=\mu+\sum_{j=0}^\infty\psi_ja_{t-j}
 $$
 
-## Statistics
+### Statistics
 
 $$
 \begin{align}
@@ -247,9 +247,9 @@ $$
 \end{align}
 $$
 
-# Invertbility
+## Invertbility
 
-## Definition
+### Definition
 
 A time series $\{Z_t\}$ is invertible if
 
@@ -263,7 +263,7 @@ This property ensures that we can recover the information sequence based on the 
 
 A general MA (or ARMA) process is invertible if all roots of its MA characteristic polynomial are outside the unit circle.
 
-## AR and MR representation
+### AR and MR representation
 
 If a time series $\{Z_t\}$ is invertible, then its autoregressive (AR) representation is:
 

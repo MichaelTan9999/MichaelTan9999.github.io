@@ -6,9 +6,9 @@ categories: 实用技术
 
 其实我从来没有想过要写浏览器扩展的。一是因为感觉浏览器扩展的本身用武之地不大，二是感觉这小小的扩展说不定写起来还很麻烦，所以一直没有想过要写这个玩意儿。但是世间之事是真的巧，一个在实习的老哥的工作流程恰好可以通过浏览器扩展来极大的加速。他委托我帮他搞一个扩展，我也抱着试一试的心理，尝试了一下。让我自己都觉得意外，浏览器扩展上手真的是比我想象的还要简单。在此也记录一下在开发过程中的一些关键概念和碰到的坑，以备后用。
 
-# 基于Chromium内核的浏览器扩展
+## 基于Chromium内核的浏览器扩展
 
-## 标签页与扩展的独立性
+### 标签页与扩展的独立性
 
 ![edge-tabs-extension.png](https://s2.loli.net/2022/06/18/pB2ihoyzkbsRFDm.png)
 
@@ -16,24 +16,24 @@ categories: 实用技术
 
 扩展，则更像是一个服务器的角色。安装一个扩展，就是在浏览器中创建了一个独立的Web服务器。当然，这个扩展的服务器也是与标签页隔离的。我们如果要编写扩展和标签页交互的话，是需要使用到标准的Chrome API来与标签页进行交互的。
 
-## 扩展的文件结构
+### 扩展的文件结构
 
 一个浏览器扩展，实质上一组网络资源（a bundle of web resources），包括html、css、js和图像等等文件，很类似于被发布到web服务器的资源。它们以zip压缩包的形式发布——当然开发的时候你只需要进行旁加载一个未压缩的文件夹。在这个文件夹中，还有一个叫做`manifest.json`的清单文件。清单文件是扩展的蓝图，包括扩展的版本、标题、运行扩展所需的权限等。
 
-## 启动扩展服务器
+### 启动扩展服务器
 
 一个服务器扩展被使用时，（如果它具有`index.html`），那么浏览器会使用`extension://{some-long-unique-identifier}/index.html`中的文件来提供服务。其中`{some-long-unique-identifier}`在安装期间分配给扩展的唯一标识符。每个扩展使用不同的唯一标识符。每个标识符都指向在浏览器中安装的 Web 捆绑包。
 
 > 权限必须在使用前在`manife.json`中注明，否则浏览器不认为这个扩展具有相应的权限。
 {: .prompt-warning}
 
-# 以一个例子来介绍扩展内部
+## 以一个例子来介绍扩展内部
 
-## 功能需求
+### 功能需求
 
 回到这篇文章的顶部，我们先来谈一下需求。现在是这个老哥打开了许多相同的功能页面，只是每个页面对应的用户不同。他需要做的事就是点击每个页面的“全选”，再点击“下载”。也就是说，我们需要获取到当前所有加载完的一类（具有相同路径前缀）标签页，再对每一个标签页进行一步全选并下载的操作即可。
 
-## 文件结构及其作用
+### 文件结构及其作用
 
 这个小扩展其实很简单，根目录下一共三个文件一个文件夹，分别是：
 
@@ -42,7 +42,7 @@ categories: 实用技术
 3. `content.js`是具体注入到特定选项卡页面中的javascript脚本。
 4. `icons/`文件夹如其名，包含图标文件。一般为16、32、48、128的正方形png文件。不能是svg文件。
 
-## `manifest.json`
+### `manifest.json`
 
 ```json
 {
@@ -89,7 +89,7 @@ categories: 实用技术
 
 完整的`manifest.json`[格式说明](https://developer.chrome.com/docs/extensions/mv3/manifest/)可以在谷歌的开发文档中找到。
 
-## `background.js`
+### `background.js`
 
 ```javascript
 chrome.action.onClicked.addListener((_) => {
@@ -136,7 +136,7 @@ chrome.scripting.executeScript(
 
 这里的`ScriptInjection`部分才是我们真正使用到的。`ScriptInjection`中必须指定的即是`target`，它是一个`InjectionTarget`对象，其中`tabId`是必须项。`ScriptInjection`中还有两个二选一的必选项，分别是示例中的`files`，以及`func`。这里为了方便划分功能，我们采用了文件形式，将对单个页面的处理代码保存在了`content.js`中。
 
-## `content.js`
+### `content.js`
 
 ```javascript
 var selectAll = document.querySelector('div[id="all-btn"]');
@@ -147,7 +147,7 @@ download.click()
 
 大可不必再费口舌介绍。
 
-# 一些额外的想法
+## 一些额外的想法
 
 我们在注入页面的功能代码`content.js`的时候，使用的是动态注入。开发文档中还提供了一种静态注入的方法。相对于动态注入来说，静态注入的代码量要少得多。
 

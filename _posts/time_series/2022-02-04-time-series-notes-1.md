@@ -5,22 +5,22 @@ categories: 时间序列分析
 math: true
 ---
 
-# What is time series?
+## What is time series?
 
-## Defintion of times series
+### Defintion of times series
 
 A time series is stochastic process in discrete time, that is a sequence of random variables $\{Z_t\}$, which are ordered by a time index $t$.
 
-## Two characteristics
+### Two characteristics
 
 - Infinite
 - Ordered by time
 
-## Two times series models
+### Two times series models
 
 For times series, the available information includes the time index $t$, and the information in the past.
 
-### Deterministic model
+#### Deterministic model
 
 $$
 \begin{align}
@@ -31,7 +31,7 @@ $$
 
 Both are polynomial regression in time $t$.
 
-### Stochastic model
+#### Stochastic model
 
 $$
 \begin{align}
@@ -42,9 +42,9 @@ $$
 
 They are also called autoregressive model.
 
-# Descriptive statistics of time series
+## Descriptive statistics of time series
 
-## The mean function
+### The mean function
 
 For a times series $\{Z_t,t\in\mathbb{Z}\}$, the mean function (or mean sequence) is defined by
 
@@ -56,7 +56,7 @@ $$
 
 That is to say, $\mu_t$ is just the expected value of the process at time $t$. In general, $\mu_t$ can be different at each time $t$.
 
-## The auto-covariance function (ACVF)
+### The auto-covariance function (ACVF)
 
  The auto-covariance function is defined as
 
@@ -65,7 +65,7 @@ $$
 \gamma(t,s)=\text{Cov}(Z_t,Z_s)=\text{Cov}{(Z_t,Z_s)=\text{E}[(Z_t-\mu_t)(Z_s-\mu_s)]=\text{E}(Z_tZ_s)-\mu_t\mu_s}
 $$
 
-## The variance function
+### The variance function
 
 Especially, when $s=t$ in the above ACVF equation, we have the variance function of $\{Z_t\}$, which is defined as
 
@@ -74,7 +74,7 @@ $$
 \gamma(t,t)=\text{Cov}(Z_t,Z_t)=\text{Var}(Z_t)
 $$
 
-## The auto-correlation function (ACF)
+### The auto-correlation function (ACF)
 
 The auto-correlation function is given by
 
@@ -83,9 +83,9 @@ $$
 \rho(t,s)=\text{Corr}(Z_t,Z_s)=\frac{\text{Cov}(Z_t,Z_s)}{\sqrt{\text{Var}(Z_t)\text{Var}(Z_s)}}=\frac{\gamma(t,s)}{\sqrt{\gamma(t,t)\gamma(s,s)}}
 $$
 
-## Some useful formula
+### Some useful formula
 
-### ACVF and ACF
+#### ACVF and ACF
 
 $$
 \begin{align}
@@ -97,7 +97,7 @@ $$
 
 The first two results are directly from the definitions, and the third one can be derived by Cauchy-Schwarz inequality.
 
-### Variance function
+#### Variance function
 
 $$
 \begin{align}
@@ -107,26 +107,26 @@ $$
 \end{align}
 $$
 
-# Stationarity
+## Stationarity
 
-## Weak stationarity
+### Weak stationarity
 
 A time series $\{Z_t\}$ is said to be **weakly** (second-order, or covariance) stationary if
 
 1. the mean function $\mu_t=\text{E}(Z_t)$ is independent of time; and
 2. $\gamma(t,t-k)=\gamma(0,-k)$ for all times $t$ and lags $k$.
 
-## Strict stationary
+### Strict stationary
 
 A time series $\{Z_t\}$ is said to be strictly stationary if the joint distribution of $Z_{t1},Z_{t2},\cdots,Z_{tn}$ is the same as that of $Z_{t1−k},Z_{t2−k},\cdots,Z_{tn−k}$ for all choices of natural number $n$, all choices of time points $t_1,t_2,\cdots,t_n$ and all choices of time lag $k$.
 
 When the first moment and second moment exist, weak stationarity and strong stationarity are exactly the same.
 
-## White noise
+### White noise
 
 White noise is a sequence of $i.i.d.$ random variables, denoted by $\{a_t\}$, with zero mean and finite variance $\sigma_a^2$, abbreviated as $WN(0,\sigma_a^2)$.
 
-### Characteristics of white noise
+#### Characteristics of white noise
 
 $$
 \begin{align}
