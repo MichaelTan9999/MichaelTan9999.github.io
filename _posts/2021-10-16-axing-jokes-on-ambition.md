@@ -5,10 +5,8 @@ date: 2021-10-9 18:00:00 +0800
 categories: [备份]
 comments: false
 ---
-
-在正文开始前，这是一篇朋友在她的个人公众号上的文章。扫描二维码关注她。点击查看[文章原文](https://mp.weixin.qq.com/s/oM4k6PS_5n6Sy9JLf-vTvA)
-
-![A_Xing](https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzIwOTE5ODYwOQ==&mid=2661850961&idx=1&sn=9113f04d7aeeb4aa7317e082de04e3be&send_time=)
+在正文开始前，这是一篇朋友在她的个人公众号上的文章。点击查看[文章原文
+](https://mp.weixin.qq.com/s/oM4k6PS_5n6Sy9JLf-vTvA)
 
 ---
 
