@@ -1,6 +1,6 @@
 ---
 title: Algorithms Notes (1) - Asymptotic Notations
-data: 2023-01-04 15:00:00 +0800
+date: 2023-01-04 15:00:00 +0800
 categories: 算法分析
 math: true
 ---
@@ -112,6 +112,6 @@ Some examples:
 
 * $g(n)=3n+4=\Theta(n)$
 * $g(n)=n\cdot\log n+2n^2=\Theta(n^2)$
-* d$g(n)=(3n^2+2\sqrt n)\cdot(n\log n+n)=\Theta(n^3\cdot\log n)$
+* $g(n)=(3n^2+2\sqrt n)\cdot(n\log n+n)=\Theta(n^3\cdot\log n)$
 
 If two algorithms have the same big-theta function, they can be considered as equally good.
