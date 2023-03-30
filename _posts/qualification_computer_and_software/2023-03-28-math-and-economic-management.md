@@ -2,8 +2,6 @@
 title: 软考笔记 - 数学与经济管理
 date: 2023-03-29 20:00:00 +0800
 categories: 软考
-math: true
-mermaid: true
 ---
 2022年5月左右的预测。
 
