@@ -6,7 +6,7 @@ math: true
 ---
 2022年5月左右的预测。
 
-![2022-May-system-configuration-and-performance-evaluation.png](https://s2.loli.net/2023/03/30/54D2uVJvLAhqfWY.png)
+![2022-May-system-configuration-and-performance-evaluation.png](https://s2.loli.net/2023/03/30/7W12RySVenwakHq.png)
 
 ## 系统性能
 
