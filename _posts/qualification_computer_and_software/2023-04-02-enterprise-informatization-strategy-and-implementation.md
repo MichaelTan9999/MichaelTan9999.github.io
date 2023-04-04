@@ -1,5 +1,5 @@
 ---
-title: 软考笔记 - 多媒体
+title: 软考笔记 - 企业信息化战略与实施
 date: 2023-04-02 18:00:00 +0800
 categories: 软考
 mermaid: true
