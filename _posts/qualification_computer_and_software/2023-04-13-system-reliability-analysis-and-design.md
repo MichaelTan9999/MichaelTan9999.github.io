@@ -1,6 +1,6 @@
 ---
 title: 软考笔记 - 系统可靠性分析与设计
-date: 2023-04-12 19:30:00 +0800
+date: 2023-04-12 15:30:00 +0800
 categories: 软考
 mermaid: true
 math: true
