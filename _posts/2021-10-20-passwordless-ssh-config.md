@@ -22,7 +22,7 @@ ssh-add -K ~/.ssh/id_ed25519
 
 现在将公钥信息设置到远程主机上。使用下面的代码设置远程主机的SSH认证。此处默认远程主机已经可以使用SSH进行用户名-密码登录。
 
-```
+```shell
 ssh-copy-id -i ~/.ssh/ed25519.pub user@host
 ```
 
