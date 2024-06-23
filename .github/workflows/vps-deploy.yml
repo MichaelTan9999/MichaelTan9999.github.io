@@ -31,9 +31,9 @@ jobs:
     - name: 🚀 Deploy via SSH
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_KEY }}
+        port: ${{ secrets.VPS_PORT }}
         source: "./_site/*" # Adjust if required
-        target: "/home/${{ secrets.USERNAME }}/blog" # Set to your deployment directory (for example /public_html)
+        target: "/home/${{ secrets.VPS_USERNAME }}/blog" # Set to your deployment directory (for example /public_html)
