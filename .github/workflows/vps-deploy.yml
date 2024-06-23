@@ -1,0 +1,40 @@
+name: Build and Deploy Jekyll via SSH
+  
+on:
+  workflow_dispatch: # Allows workflow to be run manually
+  push:
+    branches:
+      - main  # Or your default branch
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+      
+    - name: 💎 Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.3'  # Adjust as needed for your project
+
+    - name: 🏗️ Build Jekyll site 
+      run: |
+        bundle install
+        bundle exec jekyll build
+
+    - name: 🚀 Deploy via SSH
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        source: "./_site/*" # Adjust if required
+        target: "/home/${{ secrets.USERNAME }}/blog" # Set to your deployment directory (for example /public_html)
