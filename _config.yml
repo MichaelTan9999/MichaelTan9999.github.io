@@ -23,7 +23,7 @@ timezone: Asia/Shanghai
 
 title: Michael's backyard                          # the main title
 
-tagline: The answer, my friend, is blowin' in the wind   # it will display as the sub-title
+tagline: Nonsense!   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Michael's personal blog
